@@ -1,3 +1,5 @@
+# Requirements
+- Python 3.7.4
 # Usage
 ```
 ./subnet.py -f <input filename> -o <output filename>
