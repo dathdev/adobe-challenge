@@ -7,21 +7,20 @@ import socket
 
 optlist, args = getopt.getopt(sys.argv[1:], 'f:o:')
 
+input = None
+output = None
+
 for opt, val in optlist:
     if opt == "-f":
         input = open(val, "r")
     elif opt == "-o":
         output = open(val, "w")
 
-try:
-    input
-except NameError:
-    input = open("input", "r")
+if input == None:
+    input = open("./input", "r")
 
-try:
-    output
-except NameError:
-    output = open("output", "w")
+if output == None:
+    output = open("./output", "w")
 
 for line in input:
     ip_hex = line.split()[0]
