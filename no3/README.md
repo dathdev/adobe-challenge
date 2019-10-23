@@ -12,3 +12,5 @@ For the simplicity of the demo app, I implemented everything with the GET method
 - `/clearHitCounter`: to reset the hit counters while keeping the cached values.
 # Implementation
 I used a HashMap to keep all the cached value and a Linked List as a queue to manage the last hit cached value. Everytime the cache hits, the HashMap would be able to look for the cached value with an O(1) complexity given how HashMap works. Java's CircularFifoQueue would take care of clearing the last value in the queue if it exceeds the capacity automatically but I still had to remove the HashMap entry manually because Java does not allow the use of pointers.
+
+*NOTES: change the CACHE_SIZE inside lru-rest-service/src/main/java/lru/LruCache.java for testing purpose*
