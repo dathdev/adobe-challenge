@@ -3,7 +3,7 @@
 - Maven 3.6.1
 - Java 1.8.0
 ## Run Spring Boot app
-From the `lru-rest-service` folder in the command line, run `mvn spring-boot:run`. The app should be exposed on port 8080.
+From the `lru-rest-service` folder in the command line, run `mvn spring-boot:run`. The app should be exposed on `localhost:8080`.
 # API endpoints
 For the simplicity of the demo app, I implemented everything with the GET method.
 - `/getImagesUrl?Lat=<Lat value>&Long=<Long value>`: to get an "image URL" with the provided coordinates. It should also return the hit counter for the image, if the cache is full when this request was received.
